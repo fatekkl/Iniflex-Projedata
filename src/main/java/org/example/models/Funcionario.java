@@ -60,6 +60,10 @@ public class Funcionario extends Pessoa {
         return Period.between( getDataNascimento(),  LocalDate.now()).getYears();
     }
 
+    public String getFuncao() {
+        return funcao;
+    }
+
     public BigDecimal getSalariosMinimos() {
         BigDecimal salarioMinimo = BigDecimal.valueOf(1212);
         BigDecimal salariosMinimos = getSalario().divide(salarioMinimo, 2, RoundingMode.HALF_EVEN);

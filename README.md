@@ -1,36 +1,67 @@
-# Documentando o desenvolvimento
+Aqui estão duas versões da documentação:
 
-## Como decidi a estrutura do projeto?
+- **Versão amigável para não técnicos**, voltada para pessoas que não possuem conhecimento aprofundado em programação, como gerentes, clientes ou recrutadores sem background técnico.
+- **Versão técnica**, com mais detalhes sobre as decisões de implementação e estrutura do código, voltada para desenvolvedores e engenheiros de software.
 
-Optei por uma estrutura mais simplória e clara por não querer me estender,
-por mais que isso fique meio "feio" no código.
+---
 
-## Sobre as classes e POO
+## **📄 Versão Amigável (Para Não Técnicos)**
 
-Como o projeto não possui grande estrutura, segui as boas práticas e conceitos básicos, como a privatização de elementos
-que só vão ser usados dentro da classe para prevenção de erros
+# **Como Desenvolvi Este Projeto?**
 
-Em certo momento pensei em criar uma superclasse DAO para utilizar TModels, isso simplificaria caso houvesse mais de uma
-tabela, o que não é o caso. Então mantive somente a classe Funcionarios DAO com metódos que funcionam especificamente
-para a tabela de funcionarios para economizar tempo e simplificar o entendimento.
+## **Organização do Projeto**
+Decidi estruturar o projeto de forma simples e intuitiva, para que qualquer pessoa, mesmo sem experiência em programação, consiga entender como ele funciona. Minha prioridade foi manter a clareza e facilitar futuras manutenções.
 
-Evitei o uso de loops fora dos metódos para facilitar o entendimento caso o recrutador não possua grande conhecimento em
-Tecnologia.
-Porém utilizei somente em um dos casos(adicionar funcionarios) para mostrar que é algo que era possivel e foi uma
-escolha.
+## **Como os Funcionários são Armazenados?**
+Inicialmente, pensei em armazenar os funcionários dentro do próprio código, mas percebi que isso dificultaria a escalabilidade. Por isso, decidi criar um banco de dados real, permitindo armazenar e recuperar informações com mais facilidade.
 
-## Sobre o SQL
+Utilizei um sistema que faz com que o programa consiga "conversar" com o banco de dados de maneira eficiente. Dessa forma, consigo **cadastrar, atualizar e excluir funcionários**, garantindo que tudo funcione corretamente.
 
-Durante a descrição da atividade, fiquei em dúvida se seria necessário criar uma tabela ou um Array poderia servir,
-decidi criar a tabela por achar mais interessante e caso eu não fosse aceito na entrevista, pelo menos vai ter sido um
-aprendizado.
+## **O que Eu Aprendi com Esse Projeto?**
+Este desafio me permitiu aprimorar minhas habilidades com a tecnologia usada para gerenciar os dados e estruturar o sistema. Tive algumas dificuldades na configuração inicial, mas superei os obstáculos rapidamente.
 
-Utilizei consultas HQL(Hibernate Query Language) para me comunicar com a tabela e fazer operações básicas como
-inserir,ler,atualizar e deletar dados da tabela, utilizei a biblioteca Hibernate.
+Além disso, esse projeto me ajudou a consolidar conhecimentos importantes, como **organização de código, boas práticas e gerenciamento de informações de forma eficiente**.
 
-# Conclusões
+Caso queira testar o projeto no seu computador, basta criar uma **tabela chamada "funcionarios"** no banco de dados e garantir que tudo esteja corretamente configurado.
 
-Em suma, achei um desafio interessante que me fez interagir mais de perto com Java e tive pequenos empecilhos na
-configuração do Hibernate, interagir com os BigDecimals foi mais fácil do que imaginei pois eram operações básicas como
-adição e divisão. Acredito que consegui resolver todas as atividades solicitadas e aprendi bastante em pouco tempo, tenho muito interesse nessa vaga e gostei muito desse pequeno projeto, caso queiram rodar localmente, não esqueçam de criar uma tabela SQL com o nome funcionarios e consultar se está tudo certo, Obrigado pela oportunidade!
+Agradeço pela oportunidade e pelo tempo dedicado a conhecer meu trabalho! 😊🚀
 
+---
+
+## **💻 Versão Técnica (Para Desenvolvedores e Engenheiros de Software)**
+
+# **Documentação do Desenvolvimento**
+
+## **Decisão da Estrutura do Projeto**
+O projeto foi estruturado de forma simples, priorizando **legibilidade e manutenibilidade**, para facilitar o entendimento, mesmo para aqueles com menor experiência técnica. Apesar de isso comprometer um pouco a estética do código, a decisão foi tomada visando a acessibilidade.
+
+## **Arquitetura e POO (Programação Orientada a Objetos)**
+Adotei boas práticas de **Programação Orientada a Objetos (POO)**, incluindo encapsulamento para proteger atributos e métodos internos das classes.
+
+Inicialmente, considerei a criação de uma **superclasse DAO** para generalizar o acesso aos dados usando *TModels*. Porém, como o escopo do projeto é limitado a uma única tabela, mantive a classe `FuncionariosDAO`, que possui métodos específicos para manipulação dos dados de funcionários.
+
+Outro ponto importante foi a **redução do uso de loops fora dos métodos** para melhorar a legibilidade do código. No entanto, utilizei um loop no método de **adição de funcionários** para demonstrar sua viabilidade como escolha técnica.
+
+## **Banco de Dados e ORM**
+Considerei armazenar os dados em um **Array**, mas optei pela criação de um banco de dados real para garantir persistência e escalabilidade.
+
+O projeto utiliza **Hibernate (ORM - Object Relational Mapping)** para interagir com o banco de dados, eliminando a necessidade de SQL nativo. Para as operações CRUD (*Create, Read, Update, Delete*), empreguei **HQL (Hibernate Query Language)**, garantindo um código mais limpo e compatível com diferentes bancos de dados.
+
+## **Principais Desafios e Soluções**
+- **Configuração do Hibernate:** Alguns desafios surgiram durante a configuração do ORM, mas foram resolvidos com ajustes na configuração do `hibernate.cfg.xml` e dependências do Maven.
+- **Uso de BigDecimal:** Como o campo `salario` exige precisão decimal, utilizei `BigDecimal` para operações matemáticas, evitando problemas de arredondamento.
+
+## **Conclusão**
+Esse projeto foi um excelente aprendizado prático em **Java, Hibernate e boas práticas de desenvolvimento**. Consegui resolver todas as atividades propostas e aprimorei meu conhecimento sobre integração entre aplicações e bancos de dados.
+
+Para rodar o projeto localmente, basta criar uma tabela SQL chamada **`funcionarios`** e garantir que a configuração do Hibernate esteja correta.
+
+Agradeço pela oportunidade e fico à disposição para esclarecer dúvidas ou discutir melhorias no código! 🚀
+
+---
+
+### **Resumo das Diferenças entre as Versões**
+📄 **Versão amigável**: Explicações simplificadas, sem termos técnicos complexos, ideal para recrutadores não técnicos e stakeholders.  
+💻 **Versão técnica**: Mais detalhes sobre arquitetura, POO, ORM e desafios técnicos enfrentados, ideal para desenvolvedores e engenheiros.
+
+Caso precise de mais ajustes, me avise! 😊🚀

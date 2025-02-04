@@ -156,13 +156,13 @@ public class FuncionariosDAO {
         return null;
     }
 
-    public String getFuncionariosAlfabetica() {
+    public List getFuncionariosAlfabetica() {
         try (Session session = sessionFactory.openSession()) {
             Query query = session.createQuery(
                     "FROM Funcionario f ORDER BY f.nome ASC",
                     Funcionario.class
             );
-            return query.getResultList().toString();
+            return query.getResultList();
         }
     }
 

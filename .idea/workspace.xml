@@ -42,7 +42,7 @@
   <component name="RunManager">
     <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Principal" />
-      <module name="EntrevistaProthera" />
+      <module name="EntrevistaProjedata" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.models.*" />
