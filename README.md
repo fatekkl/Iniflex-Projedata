@@ -28,7 +28,7 @@ Agradeço pela oportunidade e pelo tempo dedicado a conhecer meu trabalho! 😊�
 
 ---
 
-## **💻 Versão Técnica (Para Desenvolvedores e Engenheiros de Software)**
+## **💻 Versão Técnica (Documentação técnica)**
 
 # **Documentação do Desenvolvimento**
 
