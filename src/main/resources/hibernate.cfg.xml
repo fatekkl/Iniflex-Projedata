@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurações do banco de dados -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/protherainiflex</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">S0O&amp;(H93v@k2</property>
+
+        <!-- Configurações do Hibernate -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Especificar o tipo de tabela -->
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.hbm2ddl.import_files">import.sql</property>
+        <mapping class="org.example.models.Funcionario"/>
+    </session-factory>
+</hibernate-configuration>
